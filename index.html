@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyoti Fancy Store & Boutique</title>
+    <style>
+        /* ==================== ULTRA NEON LUXURY THEME ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #08040c;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: rgba(15, 8, 22, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #ff007f;
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ff007f;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px rgba(255, 0, 127, 0.8);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b500ff;
+            text-shadow: 0 0 8px rgba(181, 0, 255, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(8, 4, 12, 0.85), rgba(8, 4, 12, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1.3;
+        }
+
+        .hero h1 span {
+            color: #ff007f;
+            text-shadow: 0 0 25px rgba(255, 0, 127, 1);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        /* WhatsApp Button */
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn-wa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.7);
+        }
+
+        /* Insta/Updates Button */
+        .btn-update {
+            display: inline-flex;
+            background: linear-gradient(135deg, #b500ff, #ff007f);
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(181, 0, 255, 0.4);
+            transition: 0.3s;
+        }
+        .btn-update:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(181, 0, 255, 0.7);
+        }
+
+        /* Section Layouts */
+        .section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        
+        .section-subtitle {
+            color: #aaa;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #140b1e;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #28163a;
+            transition: 0.4s;
+            text-align: left;
+        }
+
+        .card:hover {
+            border-color: #ff007f;
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ff007f;
+        }
+
+        .card-info p {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* Tailoring Special List */
+        .tailoring-list {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        .tailoring-list li {
+            padding: 5px 0;
+            color: #ddd;
+            font-size: 14px;
+        }
+        .tailoring-list li::before {
+            content: "8208315620 ";
+        }
+        /* Clickable Address Section Styling */
+        .address-link {
+            text-decoration: none;
+            display: block;
+            max-width: 600px;
+            margin: 0 auto;
+            transition: 0.3s;
+        }
+
+        .address-box {
+            background: #140b1e;
+            border: 2px dashed #ff007f;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .address-box:hover {
+            border-style: solid;
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.6);
+            transform: translateY(-3px);
+        }
+
+        .address-box p {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .address-box strong {
+            color: #ff007f;
+            text-shadow: 0 0 5px rgba(255, 0, 127, 0.3);
+        }
+        
+        .click-hint {
+            font-size: 14px;
+            color: #25D366;
+            font-weight: bold;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background-color: #050208;
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #140b1e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">JYOTI LUXE</div>
+        <nav>
+            <a href="#store">General Store</a>
+            <a href="#boutique">Boutique & Tailoring</a>
+            <a href="adress">Our Shop</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Jyoti Ladies General Store <br>& <span>Boutique Center</span></h1>
+        <p>Your one-stop destination for Premium Cosmetics, Jewelry, and Custom Tailoring Services in Nanded.</p>
+        <a href="https://wa.me/91 8208315620" target="_blank" class="btn-wa">💬 Contact on WhatsApp</a>
+        <a href="https://instagram.com" target="_blank" class="btn-update">✨ View Today's Latest Designs & Status</a>
+    </section>
+
+    <!-- Section 1: General Store -->
+    <section class="section" id="store">
+        <h2>Fancy & General Store</h2>
+        <p class="section-subtitle">Explore our trending collection of ladies items</p>
+        <div class="grid-container">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRuV4ex9c1LtfWerrpJzg6DBcpearfv13YXRUQv60U5Q&s=10" alt="Bangles" class="card-img">
+                <div class="card-info">
+                    <h3>Designer Bangles</h3>
+                    <p>Perfect matching bangles and kadas for every festive outfit.</p>
+                    <a href="https://wa.me" target="_blank" class="btn-wa" style="padding: 8px 20px; font-size: 13px; width: 100%;">Order on WhatsApp</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnw6akR90UnBq0Q7SmkPh4ziyvPAqxP3FjRPP4c4UjN--dSokuANAG41K&s=10" alt="Cosmetics" class="card-img">
+                <div class="card-info">
+                    <h3>Premium Cosmetics</h3>
+                    <p>Branded makeup, lipsticks, and skincare essentials for your daily glow.</p>
+                    <a href="https://wa.me" target="_blank" class="btn-wa" style="padding: 8px 20px; font-size: 13px; width: 100%;">Order on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Boutique & Tailoring -->
+    <section class="section" id="boutique" style="background-color: #0f0816;">
+        <h2>Boutique & Tailoring Services</h2>
+        <p class="section-subtitle">Expert stitching with perfect fitting for ladies</p>
+        <div class="grid-container" style="justify-content: center;">
+            <div class="card" style="max-width: 450px; margin: 0 auto;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt03IqxcZk-dhdp-cFK4h-LPi9vqVX7s4D8gOn1QCLWw&s=10" alt="Tailoring" class="card-img">
+                <div class="card-info">
+                    <h3>Custom Stitching & Designs</h3>
+                    <p>हम यहाँ हर प्रकार के लेडीज कपड़ों की बेहतरीन सिलाई और डिज़ाइनिंग करते हैं:</p>
+                    <ul class="tailoring-list">
+                        <li>Designer Blouse (Padding, Backless, Katori)</li>
+<!-- Section 3: Clickable Shop Location/Address -->
+    <section class="section" id="address">
+        <h2>📍 Visit Our Shop</h2>
+        <p class="section-subtitle">Click the address card below to open Google Maps navigation</p>
+        
+        <!-- यहाँ href="" के अंदर अपना कॉपी किया हुआ गूगल मैप्स का लिंक पेस्ट करें -->
+        <a href="https://maps.app.goo.gl/QtPmfjRXZqvg2fgC6?g_st=ac" target="_blank" class="address-link">
+            <div class="address-box">
+                <p><strong>Shop Address:</strong><br> Rangar gali, ganpati mandir ke age, sarafa, Nanded</p>
+                <p><strong>Store Timing:</strong> 10:00 AM to 09:00 PM</p>
+                <div class="click-hint">🗺️ Click to Open in Google Maps</div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Jyoti Fancy Store & Boutique. Designed with Pride.</p>
+    </footer>
+</body>
+</html>
